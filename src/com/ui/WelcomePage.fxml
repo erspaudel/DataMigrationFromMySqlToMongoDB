@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.WelcomePageController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <Label text="Welcome to MySql to MongoDB Converter" textFill="#dd0e0e">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </items>
+      </ToolBar>
+   </top>
+   <center>
+      <Pane prefHeight="320.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="comboBox_Database" layoutX="242.0" layoutY="125.0" prefHeight="27.0" prefWidth="290.0" />
+            <Label fx:id="label_Database" layoutX="21.0" layoutY="131.0" text="Database:" />
+            <Label fx:id="label_MigrateAll" layoutX="21.0" layoutY="166.0" text="Migrate all the tables:" />
+            <CheckBox fx:id="checkBox_MigrateAll" layoutX="242.0" layoutY="166.0" mnemonicParsing="false" text="Yes" />
+            <Label fx:id="label_DefaultMigration" layoutX="21.0" layoutY="201.0" text="Use Default setting for migration:" />
+            <CheckBox fx:id="checkBox_DefaultMigration" layoutX="242.0" layoutY="201.0" mnemonicParsing="false" text="Yes" />
+            <Button defaultButton="true" layoutX="339.0" layoutY="187.0" mnemonicParsing="false" onAction="#readDocumentation" text="Read Documention" textFill="#000dff" visible="false" />
+            <Label fx:id="label_BackUp" layoutX="24.0" layoutY="234.0" text="Back up all the files:" />
+            <CheckBox fx:id="checkBox_BackUp" layoutX="242.0" layoutY="231.0" mnemonicParsing="false" text="Yes" />
+            <Label layoutX="24.0" layoutY="47.0" text="Directory:" />
+            <Button fx:id="button_FileChooser" layoutX="242.0" layoutY="42.0" mnemonicParsing="false" onAction="#openDirectoryChooser" prefHeight="27.0" prefWidth="288.0" text="Click to select directoy" />
+            <Label fx:id="label_Message" layoutX="192.0" layoutY="289.0" prefHeight="23.0" prefWidth="294.0" textFill="RED" />
+            <Label fx:id="label_ConfigRadioButtons" layoutX="21.0" layoutY="91.0" prefHeight="17.0" prefWidth="216.0" text="Config File Exists in this directory:" />
+            <RadioButton fx:id="radio_Continue" layoutX="239.0" layoutY="91.0" mnemonicParsing="false" text="Continue" />
+            <RadioButton fx:id="radio_ReConfigure" layoutX="356.0" layoutY="91.0" mnemonicParsing="false" text="Re-Configure" />
+            <Label fx:id="label_EmbedDocumentLimit" layoutX="25.0" layoutY="259.0" prefHeight="30.0" prefWidth="206.0" text="Embed Documents Limit (1-100):" />
+            <TextField fx:id="textField_EmbedLimit" layoutX="240.0" layoutY="262.0" prefHeight="27.0" prefWidth="48.0" text="1" />
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="43.0" prefWidth="600.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="503.0" layoutY="7.0" mnemonicParsing="false" onAction="#nextPage" text="Next &gt;" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

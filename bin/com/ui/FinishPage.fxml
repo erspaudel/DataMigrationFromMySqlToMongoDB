@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.FinishPageController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <Label text="Thank you!" textFill="#dd0e0e">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </items>
+      </ToolBar>
+   </top>
+   <center>
+      <Pane prefHeight="320.0" prefWidth="605.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="87.0" layoutY="131.0" text="The migration process has been completed" textFill="#d6091a" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Optima Regular" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="43.0" prefWidth="600.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="27.0" layoutY="8.0" mnemonicParsing="false" onAction="#previousPage" text="&lt;&lt; Home" />
+            <Button layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#exit" prefHeight="27.0" prefWidth="66.0" text="Exit" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

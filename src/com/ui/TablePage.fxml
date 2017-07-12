@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.TablePageController">
+   <center>
+      <ScrollPane fx:id="scrollPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <Accordion fx:id="accordion" prefHeight="328.0" prefWidth="601.0" />
+         </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <Pane prefHeight="39.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="BOTTOM_LEFT" layoutX="24.0" layoutY="5.0" mnemonicParsing="false" onAction="#previousPage" text="&lt; Back" />
+            <Button alignment="BOTTOM_RIGHT" defaultButton="true" layoutX="512.0" layoutY="6.0" mnemonicParsing="false" onAction="#startMigration" text="Migrate" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
